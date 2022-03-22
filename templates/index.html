@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+  {% import "bootstrap/wtf.html" as wtf %}
+
+  <div class="container-fluid text-center mt-5">
+    <h1>Micro Brews</h1>
+    </div>
+  <div class="container mug-container text-center">
+    <img src="static/img/beer_mug.png" class="beer-mug">
+  </div>
+
+  <div class="container text-center">
+    <h2>Find a micro brew near you.</h2>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="city-form col-4 mx-auto mt-2 mb-2">
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="container text-center mt-5">
+    <h3>Tell everyone about your favorite spots!</h3>
+    <br>
+    <h3 class="text-center">Current top 10:</h3>
+  </div>
+
+{% include 'footer.html' %}

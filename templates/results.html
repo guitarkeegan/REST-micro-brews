@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+
+<div class="container results-container">
+    <div class="row card-row">
+        {% for listing in results %}
+        <div class="col-4 gy-2">
+            <div class="card mx-auto" style="width: 20rem;height: 12rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{listing['name']}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{listing['city']}}, {{listing['state']}}</h6>
+    <p class="card-text">Lastest Review: </p>
+    <a href="{{listing['website_url']}}" class="card-link">Brewery Website</a>
+    <a href="#" class="card-link">Add a Review</a>
+
+  </div>
+</div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+{% include "footer.html" %}
